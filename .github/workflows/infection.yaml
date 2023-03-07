@@ -43,7 +43,6 @@ jobs:
 
       - name: Run Infection 
         env: 
-          environment_github: true
           STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
         run: composer infection
           
