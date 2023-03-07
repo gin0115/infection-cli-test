@@ -46,10 +46,5 @@ jobs:
           STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
         run: composer infection
 
-      - name: Mutation Annotation Report
-        uses: johanholmerin/mutation-report-action@0.2.0
-        if: ${{ always() }} # Upload even if tests don't pass testing threshold
-        with:
-         repo-token: '${{ secrets.STRYKER_DASHBOARD_API_KEY }}'
-         report-json: './infection.json' # Optional, default
+
           
