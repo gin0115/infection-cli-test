@@ -4,7 +4,7 @@ namespace Gin0115\Infection_Test;
 
 use Gin0115\Infection_Test\User;
 
-class FilterClass {
+final class FilterClass {
 
 	private const DEFAULT_AGE = 18;
 
