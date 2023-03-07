@@ -1,0 +1,41 @@
+Escaped mutants:
+================
+
+1) /shared/httpd/php/htdocs/infection-cli-test/src/FilterClass.php:25    [M] GreaterThanOrEqualTo
+
+--- Original
++++ New
+@@ @@
+     public function __invoke(array $collection) : array
+     {
+         return array_filter($collection, function (User $item) : bool {
+-            return $item->getAge() >= $this->age;
++            return $item->getAge() > $this->age;
+         });
+     }
+ }
+
+
+2) /shared/httpd/php/htdocs/infection-cli-test/src/FilterClass.php:25    [M] GreaterThanOrEqualToNegotiation
+
+--- Original
++++ New
+@@ @@
+     public function __invoke(array $collection) : array
+     {
+         return array_filter($collection, function (User $item) : bool {
+-            return $item->getAge() >= $this->age;
++            return $item->getAge() < $this->age;
+         });
+     }
+ }
+
+
+Timed Out mutants:
+==================
+
+Skipped mutants:
+================
+
+Not Covered mutants:
+====================
